@@ -41,12 +41,12 @@ jobs:
             git config user.name Carlos Rodriguez
             git config user.email carlosdumar4@gmail.com
 
-            git pull origin main
+            git pull origin master
 
             npm run build
             npm run release
 
-            git push origin main --follow-tags --force
+            git push origin master --follow-tags --force
 
             npm run publish
 
