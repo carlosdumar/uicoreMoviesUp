@@ -1,0 +1,8 @@
+.font {
+  font-size: var(--font-size-normal);
+  font-weight: normal;
+  font-style: normal;
+
+  white-space: normal;
+  line-height: 26px;
+}
