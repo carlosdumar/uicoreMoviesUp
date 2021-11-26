@@ -25,7 +25,7 @@ jobs:
           echo "//npm.pkg.github.com/:_authToken="$NPM_TOKEN >> .npmrc
           echo always-auth=true >> .npmrc
         env:
-          GIT_BOT_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Cache node_modules
         uses: actions/cache@v1
         with:
