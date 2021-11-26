@@ -12,6 +12,7 @@ import css from './StyledProps.css'
 /**
  * Styled Props: Define reusable styles across components using props.
  */
+
 export interface StyledProps {
   /** Component width */
   width?: string | number
