@@ -13,7 +13,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          token: ${{ secrets.NPM_TOKEN }}
           fetch-depth: 0
       
       - name: Set Up Node
