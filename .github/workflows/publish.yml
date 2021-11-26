@@ -1,4 +1,4 @@
-name: Publish
+name: npm-publish
 on:
   push:
     branches:
@@ -13,7 +13,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          token: ${{ secrets.GIT_BOT_TOKEN }}
+          token: ${{ secrets.NPM_TOKEN }}
           fetch-depth: 0
       
       - name: Set Up Node
@@ -22,10 +22,10 @@ jobs:
           node-version: '14'
       - name: Set up GitHub Package Registry token
         run: |
-          echo "//npm.pkg.github.com/:_authToken="$GIT_BOT_TOKEN >> .npmrc
+          echo "//npm.pkg.github.com/:_authToken="$NPM_TOKEN >> .npmrc
           echo always-auth=true >> .npmrc
         env:
-          GIT_BOT_TOKEN: ${{ secrets.GIT_BOT_TOKEN }}
+          GIT_BOT_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Cache node_modules
         uses: actions/cache@v1
         with:
@@ -38,8 +38,8 @@ jobs:
       
       - name: Build and Publish
         run: |
-            git config user.name Carlos Rodriguez
-            git config user.email carlosdumar4@gmail.com
+            git config user.name crodriguezd
+            git config user.email cdumar9@hotmail.com
 
             git pull origin master
 
@@ -48,5 +48,5 @@ jobs:
 
             git push origin master --follow-tags --force
 
-            npm run publish
+            npm publish
 
