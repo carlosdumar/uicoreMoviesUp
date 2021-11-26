@@ -39,7 +39,7 @@ jobs:
       - name: Build and Publish
         run: |
             git config user.name crodriguezd
-            git config user.email cdumar9@hotmail.com
+            git config user.email carlosdumar4@gmail.com
 
             git pull origin master
 
