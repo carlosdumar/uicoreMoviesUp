@@ -19,6 +19,7 @@ jobs:
           node-version: '14'
       - name: Set up GitHub Package Registry token
         run: |
+          echo @carlosdumar:registry=https://npm.pkg.github.com > .npmrc
           echo "//npm.pkg.github.com/:_authToken="$NPM_TOKEN >> .npmrc
           echo always-auth=true >> .npmrc
         env:
