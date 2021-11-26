@@ -16,7 +16,8 @@
     "clean": "rm -rf docs/static dist",
     "types:copy": "echo 'Adhoc type copy...'; mv dist/src dist/; rm -rf dist/src",
     "fmt": "prettier --write \"./src/**/*.{ts,tsx,css,scss}\"",
-    "prepare": "npm run lint && npm run prebuild && npm run build"
+    "prepare": "npm run lint && npm run prebuild && npm run build",
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
