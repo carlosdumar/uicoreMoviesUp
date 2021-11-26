@@ -1,6 +1,6 @@
 {
   "name": "@moviesup/uicore",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "uicore for moviesup project ",
   "main": "dist/index.bundle.js",
   "types": "dist/index.d.ts",
