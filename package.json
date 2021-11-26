@@ -19,10 +19,7 @@
     "prepare": "npm run lint && npm run prebuild && npm run build",
     "release": "standard-version"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/carlosdumar/uicoreMoviesUp.git"
-  },
+  "repository": "https://github.com/carlosdumar/uicoreMoviesUp",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
