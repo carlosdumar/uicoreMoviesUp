@@ -17,8 +17,19 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 12
-      - run: npm ci
-      # - run: npm test
+      - name: Set up GitHub Package Registry token
+        run: |
+          echo @carlosdumar:registry=https://npm.pkg.github.com > .npmrc
+          echo "//npm.pkg.github.com/:_authToken="$NODE_AUTH_TOKEN >> .npmrc
+          echo always-auth=true >> .npmrc
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Cache node_modules
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('npm.lock') }}
+          restore-keys: ${{ runner.os }}-node-
   publish-gpr:
     needs: build
     runs-on: ubuntu-latest
@@ -31,8 +42,21 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
-      - run: npm ci
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
+      - name: Install Packages
+        run: npm install
+      
+      - name: Build and Publish
+        run: |
+            git config user.name crodriguezd
+            git config user.email carlosdumar4@gmail.com
+
+            git pull origin master
+
+            npm run build
+            npm run release
+
+            git push origin master --follow-tags --force
+            
+            npm publish
 
