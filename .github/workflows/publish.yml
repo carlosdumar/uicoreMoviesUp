@@ -17,8 +17,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '14'
-          registry-url: 'https://npm.pkg.github.com/'
-          scope: '@carlosdumar'
+          registry-url: 'https://npm.pkg.github.com'
       - name: Set up GitHub Package Registry token
         run: |
           echo @carlosdumar:registry=https://npm.pkg.github.com > .npmrc
