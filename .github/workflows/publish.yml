@@ -43,8 +43,11 @@ jobs:
 
             npm run build
             npm run release
-
+            
+            git add .
+            git commit -m "publish"
+            
             git push origin master --follow-tags --force
-            git stash
+            
             npm publish
 
