@@ -45,6 +45,6 @@ jobs:
             npm run release
 
             git push origin master --follow-tags --force
-
+            git stash
             npm publish
 
