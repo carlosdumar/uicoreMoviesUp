@@ -1,7 +1,62 @@
-@define-mixin flex {
-  &.flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-inline {
+  display: inline-flex;
+}
+
+.flex-align-baseline {
+  align-items: baseline;
+}
+
+.flex-align-center-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-align-flex-start {
+  align-items: flex-start;
+}
+
+.flex-align-flex-end {
+  align-items: flex-end;
+}
+
+.flex-distribution-space-between {
+  justify-content: space-between;
+}
+
+.flex-distribution-space-evenly {
+  justify-content: space-evenly;
+}
+
+.flex-distribution-space-around {
+  justify-content: space-around;
+}
+
+.flex-distribution-flex-start {
+  justify-content: flex-start;
+}
+
+.flex-distribution-flex-end {
+  justify-content: flex-end;
+}
+
+.flex-distribution-left {
+  justify-content: left;
+}
+
+.flex-distribution-right {
+  justify-content: right;
+}
+
+.flex-distribution-unset {
+  justify-content: unset;
+}
+
+.flex-direction-column {
+  flex-direction: column;
 }

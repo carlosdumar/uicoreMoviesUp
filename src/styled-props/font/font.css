@@ -6,3 +6,7 @@
   white-space: normal;
   line-height: 26px;
 }
+
+.font-weight-bold {
+  font-weight: bold;
+}

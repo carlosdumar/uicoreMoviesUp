@@ -1,2 +1,11 @@
 import './styles/styles.css';
 export { Button } from './components/Button/Button';
+export { Image } from './components/Image/Image';
+export { Progress } from './components/Progress/Progress';
+export { Popover } from './components/Popover/Popover';
+export { Color } from './core/Color';
+export { Icon } from './icons/Icon';
+export { Text } from './components/Text/Text';
+export { List } from './components/List/List';
+export { Container } from './components/Container/Container';
+export { Space } from './components/Space/Space';

@@ -1,2 +1,6 @@
 @import url('./border/border.css');
 @import url('./color.css');
+@import url('./font/font.css');
+@import url('./flex/flex.css');
+@import url('./margin/margin.css');
+@import url('./padding/padding.css');

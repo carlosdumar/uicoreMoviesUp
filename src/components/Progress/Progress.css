@@ -1,0 +1,8 @@
+.backgroundBlack div {
+  background-color: var(--black) !important;
+}
+
+.backgroundBlack div span {
+  color: var(--white) !important;
+  font-weight: 600;
+}
