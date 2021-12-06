@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { HTMLAttributes } from 'react'
 import {
   styledClasses,
   StyledProps,
   omitStyledProps,
 } from '../../styled-props/StyledProps'
 
-interface ContainerProps extends StyledProps {
+interface ContainerProps extends HTMLAttributes<HTMLDivElement>, StyledProps {
   /** className to be appended to default className */
   className?: string
 
@@ -14,10 +14,5 @@ interface ContainerProps extends StyledProps {
 }
 
 export const Container: React.FC<ContainerProps> = props => {
-  const { children } = props
-  return (
-    <div {...omitStyledProps(props)} className={styledClasses(props)}>
-      {children}
-    </div>
-  )
+  return <div {...omitStyledProps(props)} className={styledClasses(props)} />
 }
