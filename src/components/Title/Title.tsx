@@ -7,8 +7,8 @@ import {
 } from '../../styled-props/StyledProps'
 
 interface copyable {
-  text: string
-  onCopy: () => void
+  text: string 
+  onCopy: () => void 
   icon: React.ReactNode
   tooltips: false | [React.ReactNode, React.ReactNode]
 }
