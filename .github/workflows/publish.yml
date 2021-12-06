@@ -22,12 +22,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Set up GitHub Package Registry token
-        run: |
-          echo @carlosdumar:registry=https://npm.pkg.github.com > .npmrc
-          echo "//npm.pkg.github.com/:_authToken="$token >> .npmrc
-          echo always-auth=true >> .npmrc
       - name: Cache node_modules
         uses: actions/cache@v1
         with:
@@ -46,21 +40,9 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
-
-      - name: Install Packages
-        run: npm install
-      
-      - name: Build and Publish
-        run: |
-            git config user.name crodriguezd
-            git config user.email carlosdumar4@gmail.com
-
-            git pull origin master
-
-            npm run build
-            npm run release
-
-            git push origin master --follow-tags --force
-            
-            npm publish
+          scope: '@carlosdumar'
+      - run: echo "registry=https://npm.pkg.github.com/@carlosdumar" >> .npmrc        
+      - run: npm publish $(ls *.tgz)
+        env:
+        NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
