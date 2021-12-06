@@ -8,7 +8,7 @@ import {
 
 interface copyable {
   text: string
-  onCopy: () => void 
+  onCopy: () => void
   icon: React.ReactNode
   tooltips: false | [React.ReactNode, React.ReactNode]
 }
