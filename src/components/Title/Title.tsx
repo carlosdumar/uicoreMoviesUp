@@ -37,7 +37,7 @@ interface ellipsis {
 }
 
 interface TitleProps extends StyledProps {
-  /** className to be appended to default className */
+  /** className to be appended to default className s */
   className?: string
 
   /** Code style */
