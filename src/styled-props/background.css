@@ -2,4 +2,16 @@
   &.background-black {
     background: var(--black);
   }
+
+  &.background-white {
+    background: var(--white);
+  }
+
+  &.background-yellow600 {
+    background: var(--yellow600);
+  }
+
+  &.background-brown600 {
+    background: var(--brown600);
+  }
 }
