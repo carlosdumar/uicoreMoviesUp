@@ -5,7 +5,7 @@ on:
       - master
     paths:
       - 'src/**'
-      
+
 permissions:
   contents: read
   pull-requests: write
@@ -22,11 +22,11 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 12
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Set up GitHub Package Registry token
         run: |
           echo @carlosdumar:registry=https://npm.pkg.github.com > .npmrc
-          echo "//npm.pkg.github.com/:_authToken="$repo-token >> .npmrc
+          echo "//npm.pkg.github.com/:_authToken="$token >> .npmrc
           echo always-auth=true >> .npmrc
       - name: Cache node_modules
         uses: actions/cache@v2
