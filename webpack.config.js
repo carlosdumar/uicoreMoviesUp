@@ -7,7 +7,7 @@ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 const isProductionMode = process.env.NODE_ENV === "production";
 
 module.exports = {
-    mode: 'development',
+    mode: isProductionMode ? 'development' : 'production',
     entry: {
         index: './src/index.ts',
     },
@@ -25,6 +25,7 @@ module.exports = {
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
+        publicPath: '/dist/',
         libraryTarget: 'umd'
     },
     externals: [nodeExternals()],

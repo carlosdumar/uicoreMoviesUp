@@ -1,6 +1,6 @@
 {
   "name": "@carlosdumar/uicoremoviesup",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "uicore for moviesup project ",
   "main": "dist/index.bundle.js",
   "types": "dist/index.d.ts",
@@ -8,7 +8,7 @@
   "scripts": {
     "lint": "eslint \"./src/**/*.{ts, tsx}\" && stylelint \"src/**/*.css\"",
     "ui:icons": "node ./scripts/build-icons.js > ./src/icons/CarlosIcons.ts",
-    "ui:build": "SET NODE_ENV=production webpack",
+    "ui:build": "cross-env NODE_ENV=production webpack ",
     "test": "jest --no-cache ./src",
     "test:ci": "jest --no-cache ./src --ci --coverage --reporters=jest-junit --reporters=default --runInBand --silent",
     "prebuild": "npm run clean",
@@ -38,6 +38,7 @@
   "dependencies": {
     "antd": "^4.16.13",
     "classnames": "^2.3.1",
+    "cross-env": "^7.0.3",
     "identity-obj-proxy": "^3.0.0",
     "lint-staged": "^12.0.2",
     "react": "^17.0.2",
