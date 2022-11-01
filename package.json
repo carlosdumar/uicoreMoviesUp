@@ -1,14 +1,14 @@
 {
-  "name": "@moviesup/uicore",
-  "version": "1.4.7",
+  "name": "@carlosdumar/uicoremoviesup",
+  "version": "1.0.0",
   "description": "uicore for moviesup project ",
   "main": "dist/index.bundle.js",
   "types": "dist/index.d.ts",
   "style": "dist/index.css",
   "scripts": {
-    "lint": "eslint \"./src/**/*.{ts, tsx}\" && stylelint \"src/**/*.css\" && prettier --check \"src/**/*.{ts, tsx, css}\"",
+    "lint": "eslint \"./src/**/*.{ts, tsx}\" && stylelint \"src/**/*.css\"",
     "ui:icons": "node ./scripts/build-icons.js > ./src/icons/CarlosIcons.ts",
-    "ui:build": "NODE_ENV=production webpack",
+    "ui:build": "SET NODE_ENV=production webpack",
     "test": "jest --no-cache ./src",
     "test:ci": "jest --no-cache ./src --ci --coverage --reporters=jest-junit --reporters=default --runInBand --silent",
     "prebuild": "npm run clean",
@@ -23,7 +23,7 @@
     "url": "git://github.com/carlosdumar/uicoreMoviesUp.git"
   },
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
   },
   "keywords": [
     "movies",
@@ -47,7 +47,7 @@
   },
   "devDependencies": {
     "@stylelint/postcss-css-in-js": "^0.37.2",
-    "@svgr/webpack": "^5.5.0",
+    "@svgr/webpack": "^6.5.0",
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^12.1.2",
     "@testing-library/react-hooks": "^7.0.2",
@@ -85,7 +85,7 @@
     "utility-types": "^3.10.0",
     "webpack": "^5.64.1",
     "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.5.0",
+    "webpack-dev-server": "^4.11.1",
     "webpack-node-externals": "^3.0.0",
     "yaml-loader": "^0.6.0"
   },
