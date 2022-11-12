@@ -1,17 +1,15 @@
-@define-mixin background {
-  &.background-black {
-    background: var(--black);
-  }
+.background-black {
+  background: var(--black);
+}
 
-  &.background-white {
-    background: var(--white);
-  }
+.background-white {
+  background: var(--white);
+}
 
-  &.background-yellow600 {
-    background: var(--yellow600);
-  }
+.background-yellow600 {
+  background: var(--yellow600);
+}
 
-  &.background-brown600 {
-    background: var(--brown600);
-  }
+.background-brown600 {
+  background: var(--brown600);
 }
