@@ -7,7 +7,7 @@ import {
   } from '../../styled-props/StyledProps'
 
 interface HeaderProps extends StyledProps,  LayoutProps {
-    /** className to be appended to default className */
+    /** className to be appended to default className  */
   className?: string
 }
 
