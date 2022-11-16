@@ -47,7 +47,7 @@ jobs:
           scope: "@carlosdumar"
       - name: Install Packages
         run: npm ci
-        run: npm publish
+      - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
