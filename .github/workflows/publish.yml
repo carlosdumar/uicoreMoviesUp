@@ -6,7 +6,7 @@ on:
     paths:
       - 'src/**'
       - '.npmrc'
-      - '.github'
+      - '.github/**'
 
 permissions:
   contents: read
